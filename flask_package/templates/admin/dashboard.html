@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Admin Dashboard
+{% endblock %}
+
+{% block content2 %}
+  <style>
+    .dashboard {
+      padding: 10px 20px;
+      margin: 10px 30px;
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(9px);
+      border: 2px solid white;
+      border-radius: 20px 0px;
+      height: 65vh;
+      align-content: center;
+      margin-bottom: 50px;
+    }
+  </style>
+
+  {% with messages=get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }} alert-dismissible" role="alert" style="position: relative; top: 10px; margin: 0 10px; ">
+          <span>{{ message }}</span>
+        </div>
+        <br />
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  <br />
+  <div class="dashboard">
+    <h1 style="margin-top: 10px;"><center>Welcome to the Admin Dashboard</center></h1>
+
+    <br />
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3">
+          <div class="card-header">Users</div>
+          <div class="card-body">
+            <h5 class="card-title">Manage Users</h5>
+            <p class="card-text">View and manage all registered users.</p>
+            <a href="{{ url_for('admin_users') }}" class="btn btn-light">Go</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-white bg-success mb-3">
+          <div class="card-header">Products</div>
+          <div class="card-body">
+            <h5 class="card-title">Manage Products</h5>
+            <p class="card-text">View and manage all products.</p>
+            <a href="{{ url_for('admin_products') }}" class="btn btn-light">Go</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-white bg-info mb-3">
+          <div class="card-header">Orders</div>
+          <div class="card-body">
+            <h5 class="card-title">Manage Orders</h5>
+            <p class="card-text">View, update, and manage all orders.</p>
+            <a href="{{ url_for('admin_orders') }}" class="btn btn-light">Go</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

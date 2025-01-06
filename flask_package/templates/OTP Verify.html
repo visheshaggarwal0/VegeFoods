@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+{% block title %}| Verification{% endblock title %}
+
+{% block content %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}" />
+  <div class="bodycontent4">
+    <br />
+    <br />
+    <br />
+    <div class="wrapper">
+      <form action="#" method="POST">
+        <h2>Email Verification:</h2>
+        <div class="input-field" style="margin-left: 0;margin-top: 27px;">
+          <!-- <input type="password" required> -->
+          <input type="text" id="otp" name="otp" required>
+          <label for="otp">Enter the Verification Code:</label>
+        </div>
+        <div class="forget">
+          <a href="#">Didn't get the mail? Click here to Resend!</a>
+        </div>
+        <button type="submit">Verify</button>
+        <br />
+      </form>
+    </div>
+  </div>
+  <br />
+  <br />
+  <br />
+{% endblock %}

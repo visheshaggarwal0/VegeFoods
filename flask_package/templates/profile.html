@@ -1,0 +1,29 @@
+{%extends "main.html"%}
+
+{%block content%}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+  <div class='bodycontent3 profile-page'>
+      <br>
+      <br>
+      <div>
+    <div class="wrapper wrapper3">
+    <form>
+      <h2>Profile</h2>
+      <h4>Name: {{user.username}} </h4>
+      <h4>Phone: {{user.phone}} </h4>
+      <h4>Email: {{user.email}} </h4>
+      <br>
+      <button style='margin-bottom:60px'>
+        <a  href="{{url_for('index')}}" style='text-decoration:none;'>
+          Return to Home Page
+        </a>
+      </button>
+    </form>
+  </div>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+{%endblock%}

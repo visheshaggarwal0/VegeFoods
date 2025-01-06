@@ -1,0 +1,68 @@
+{%extends "main.html"%}
+{% block title %}| Login{% endblock title %}
+
+{%block content%}
+<link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style1.css') }}">
+<div class='bodycontent'>
+    <br>
+    <br>
+    <br>
+    <div class="wrapper">
+        <form action="#" method="POST">
+            {{ form.hidden_tag() }}
+            <h2>Login</h2>
+            <div class="input-field">
+                <!--<input type="text" required>-->
+                {{form.email}}
+                <label>Enter your email</label>
+            </div>
+            <div class="input-field">
+                <!--<input type="password" required>-->
+                {{form.password}}
+                <label>Enter your password</label>
+            </div>
+            <div class="forget">
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit">Log In</button>
+            <div class="register">
+                <p>Don't have an account? <a
+                        href="{{ url_for('register') }}">Register</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<script>
+  function easeScroll(target, duration) {
+    let start = window.scrollY || window.pageYOffset; // Get current scroll position
+    let distance = target - start; // Total distance to scroll
+    let startTime = null;
+
+    function scrollAnimation(currentTime) {
+        if (startTime === null) startTime = currentTime; // Start timer
+
+        let timeElapsed = currentTime - startTime;
+        let progress = timeElapsed / duration; 
+        let easeProgress = 0.5 - Math.cos(progress * Math.PI) / 2; 
+
+        window.scrollTo(0, start + distance * easeProgress); 
+
+        if (timeElapsed < duration) {
+            requestAnimationFrame(scrollAnimation); 
+        }
+    }
+    requestAnimationFrame(scrollAnimation); 
+  }
+
+  window.onload = function() {
+    setTimeout(function() {
+      easeScroll(69, 600)
+    }, 1); 
+  }
+</script>
+{%endblock%}

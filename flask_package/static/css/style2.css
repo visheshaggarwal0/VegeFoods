@@ -1,0 +1,36 @@
+nav {
+    background-color: white;
+    color: black;
+    border-bottom: 5px solid rgb(25, 236, 236);
+}
+
+a {
+    color: rgb(0, 68, 255);
+    text-decoration: none;
+    opacity: 0.8;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.338);
+}
+
+a:hover {
+    color: rgb(13, 232, 232);
+    opacity: 1.0;
+    text-decoration: none;
+}
+
+.nav-link{
+    color: black !important;
+}
+ 
+body{
+    background: url('../images/blue.png');
+    background-size: cover; /* Cover the entire screen */
+    background-attachment: fixed; /* Keep the background fixed during scrolling */
+    background-position: center; 
+}
+
+.table{
+    background-color: rgba(255, 255, 255, 0.509);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(9px);
+    border-radius: 15px;
+}

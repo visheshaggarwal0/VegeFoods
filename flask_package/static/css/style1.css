@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.bodycontent::before {
+  /* min-height: 100vh; */
+  width: 100%;
+  content: "";
+  position: absolute;
+  height: 102vh;
+  background: url("../images/bg-vegetables.jpg"), #000;
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+.bodycontent2::before {
+  /* min-height: 100vh; */
+  width: 100%;
+  content: "";
+  position: absolute;
+  height: 100vh;
+  background: url("../images/Designer.jpeg"), #000;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.bodycontent3::before {
+  /* min-height: 100vh; */
+  width: 100%;
+  content: "";
+  position: absolute;
+  height: 87vh;
+  background: url("../images/bg-21.jpg"), #000;
+  background-position: center;
+  background-size: cover;
+}
+
+.bodycontent4::before {
+  /* min-height: 100vh; */
+  width: 100%;
+  content: "";
+  position: absolute;
+  height: 84vh;
+  background: url("../images/OTP.png"), #000;
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 360px;
+  border-radius: 8px;
+  padding-top: 20px;
+  align-self: center;
+  text-align: center;
+  border: 1px solid white;
+  backdrop-filter: blur(9px);
+  /* -webkit-backdrop-filter: blur(9px); */
+  margin-left: 10vw;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.wrapper3 {
+  border: opx;
+}
+
+.wrapper2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 620px;
+  border-radius: 8px;
+  padding-top: 20px;
+  align-self: center;
+  text-align: center;
+  border: 1px solid white;
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  margin-left: 60px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-family: 'lora', Georgia, 'Times New Roman', serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+
+.wrapper3 h2 {
+  font-family: 'lora', Georgia, 'Times New Roman', serif;
+  font-size: 4rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+h3 {
+  font-size: 2rem;
+  color: white;
+  font-family: serif;
+}
+
+
+
+.input-field {
+  position: relative;
+  width: 250px;
+  border-bottom: 2px solid white;
+  margin: 15px 0;
+  margin-left: 20px;
+}
+
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+  text-shadow: 1px 1px 1px #000;
+}
+
+/* .wrapper2 .input-field label {
+  color: #396576; */
+/* } */
+
+.input-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: white;
+  /* text-shadow: 1px 1px 1.5px #000; */
+}
+
+.wrapper2 .input-field input {
+  color: green;
+}
+
+.input-field input:focus~label,
+.input-field input:valid~label {
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+}
+
+.forget {
+  display: flex;
+  align-items: rigth;
+  justify-content: center;
+  margin: 5px 0 10px 0;
+  color: #fff;
+}
+
+#remember {
+  accent-color: #fff;
+}
+
+.forget label {
+  display: flex;
+  align-items: center;
+}
+
+.forget label p {
+  margin-left: 8px;
+}
+
+.wrapper a {
+  color: #efefef;
+  text-decoration: none;
+}
+
+.wrapper3 a {
+  color: white;
+}
+
+.wrapper a:hover {
+  text-decoration: underline;
+}
+
+.wrapper3 a:hover {
+  color: white;
+}
+
+button {
+  background: #fff;
+  color: black;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+  margin: 10px 0;
+}
+
+.wrapper2 button {
+  color: green;
+}
+
+button:hover {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.wrapper3 button {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+input:is(:-webkit-autofill, :autofill) {
+  background-color: transparent !important;
+  /* border: 5px solid blue; */
+}
+
+input:-internal-autofill-selected {
+  background-color: transparent !important;
+}
+
+.register {
+  text-align: center;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.navbar {
+  background: white;
+}
+
+
+.profile-page h2 {
+  margin-top: 1.5vh;
+  font-size: 2.5rem;
+  font-family: 'Lora';
+  text-shadow: 2px 2px 2px black;
+}
+
+
+.profile-page h4 {
+  font-size: 1.3rem;
+  color: white;
+  font-family: serif;
+  text-align: left;
+  margin-left: 1vw;
+}
+
+.profile-page .wrapper {
+  width: 300px;
+}
+
+.register-flex {
+  display: flex;
+}
