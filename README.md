@@ -49,11 +49,10 @@
 - Development of an advanced analytics and reporting module for administrators.
 - Integration of secure online payment gateways for a seamless checkout experience.
 
+We welcome contributions! Feel free to submit pull requests or report any issues to help us refine and enhance this project further.
+
 ## License
 This project is licensed under the MIT License. See the LICENSE file for full details.
-
----
-We welcome contributions! Feel free to submit pull requests or report any issues to help us refine and enhance this project further.
 
 ## Contact
 For any inquiries or suggestions, feel free to reach out at:
